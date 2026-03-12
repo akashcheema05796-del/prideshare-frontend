@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { authAPI, scheduleAPI, buildingAPI } from '@/lib/api';
+import { authAPI, scheduleAPI, buildingAPI } from './src/lib/api';
 import { Upload, Plus, Trash2, Check, Loader2, Calendar, MapPin, Clock, UserPlus } from 'lucide-react';
 
 const DAYS_OF_WEEK = [
