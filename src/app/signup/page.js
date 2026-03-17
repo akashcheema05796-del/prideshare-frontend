@@ -73,7 +73,16 @@ export default function SignupPage() {
         setSuccess('');
       }, 1500);
     } catch (err) {
-      setError(err.response?.data?.detail || 'Signup failed. Please try again.');
+      const detail = err.response?.data?.detail;
+      let errMsg = 'Signup failed. Please try again.';
+      if (typeof detail === 'string') {
+        errMsg = detail;
+      } else if (Array.isArray(detail)) {
+        errMsg = detail.map(d => d.msg).join(', ');
+      } else if (detail) {
+        errMsg = JSON.stringify(detail);
+      }
+      setError(errMsg);
     } finally {
       setLoading(false);
     }
