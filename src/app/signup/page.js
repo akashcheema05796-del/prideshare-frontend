@@ -59,6 +59,19 @@ export default function SignupPage() {
     setLoading(true);
     setError('');
     
+    // Frontend email validation
+    if (!userData.email || !userData.email.includes('@')) {
+      setError('Please enter a valid email address.');
+      setLoading(false);
+      return;
+    }
+    
+    if (!userData.email.toLowerCase().endsWith('@pnw.edu')) {
+      setError('Must use a valid @pnw.edu email address.');
+      setLoading(false);
+      return;
+    }
+    
     try {
       const response = await authAPI.signup(userData);
       setUserId(response.data.user_id);
@@ -251,7 +264,7 @@ export default function SignupPage() {
             </h2>
             <p className="text-gray-400 mb-6">Join the PNW carpool community</p>
             
-            <form onSubmit={handleUserSignup} className="space-y-6">
+            <form onSubmit={handleUserSignup} className="space-y-6" noValidate>
               {/* Email */}
               <div>
                 <label className="block text-sm font-medium mb-2">
