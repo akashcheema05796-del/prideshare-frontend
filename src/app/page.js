@@ -40,15 +40,15 @@ export default function HomePage() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
               <div>
-                <div className="text-4xl font-bold text-pnw-gold">100+</div>
+                <div className="text-4xl font-bold text-pnw-gold">NA</div>
                 <div className="text-sm text-gray-400">Students</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-pnw-gold">$500+</div>
+                <div className="text-4xl font-bold text-pnw-gold">$NA </div>
                 <div className="text-sm text-gray-400">Saved on Gas</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-pnw-gold">50+</div>
+                <div className="text-4xl font-bold text-pnw-gold">NA</div>
                 <div className="text-sm text-gray-400">Rides Completed</div>
               </div>
             </div>
@@ -154,7 +154,7 @@ export default function HomePage() {
       <div className="max-w-7xl mx-auto px-4 py-20 text-center">
         <h2 className="text-4xl font-bold mb-4">Ready to Save Money?</h2>
         <p className="text-xl text-gray-400 mb-8">
-          Join 100+ PNW students already carpooling
+          Join NA PNW students already carpooling
         </p>
         <Link
           href="/signup"
@@ -167,7 +167,7 @@ export default function HomePage() {
       {/* Footer */}
       <div className="border-t border-gray-700 mt-20">
         <div className="max-w-7xl mx-auto px-4 py-8 text-center text-gray-400">
-          <p>© 2025 Pride Share - Purdue Northwest</p>
+          <p>© 2026 Pride Share - Purdue Northwest</p>
           <p className="text-sm mt-2">Built by students, for students 🎓</p>
         </div>
       </div>
